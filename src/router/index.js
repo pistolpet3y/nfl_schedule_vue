@@ -1,15 +1,13 @@
-import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "/src/views/HomeView.vue";
-import InfoView from "/src/views/InfoView.vue";
-
-const routes = [
-  { path: "/", component: HomeView },
-  { path: "/info", component: InfoView },
-];
+import { createRouter, createWebHashHistory } from 'vue-router'
+import HomeView from '../views/HomeView.vue'
+import InfoView from '../views/InfoView.vue'
 
 const router = createRouter({
-  history: createWebHistory(),
-  routes,
-});
+  history: createWebHashHistory(), // <--- detta är nyckeln!
+  routes: [
+    { path: '/', name: 'Home', component: HomeView },
+    { path: '/info', name: 'Info', component: InfoView }
+  ]
+})
 
-export default router;
+export default router

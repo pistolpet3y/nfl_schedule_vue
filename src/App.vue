@@ -39,10 +39,11 @@
 </template>
 
 <script setup>
-import banner from "../assets/banner.gif";
-import settings from "../assets/settings.png";
-import denver from "../assets/den.png";
-import nfl from "../assets/nfl.png";
+
+import banner from "./assets/banner.gif";
+import settings from "./assets/settings.png";
+import denver from "./assets/den.png";
+import nfl from "./assets/nfl.png";
 </script>
 
 
