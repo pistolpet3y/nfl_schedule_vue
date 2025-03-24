@@ -1,6 +1,6 @@
 <template>
   <header>
-    <img src="/src/assets/banner.gif" alt="banner" />
+    <img :src="banner" alt="banner" />
     <h1>SCHEDULE</h1>
   </header>
 
@@ -18,25 +18,33 @@
       <div id="footerNav">
         <div id="resources">
           <router-link to="/info">
-            <img src="/src/assets/settings.png" alt="Settings" />
+            <img :src="settings" alt="Settings" />
             <span>Info</span>
           </router-link>
         </div>
         <div id="copyright">© Copyright</div>
         <div id="denver">
           <a href="https://www.denverbroncos.com/" target="_blank">
-            <img src="/src/assets/den.png" />Denver Broncos
+            <<img :src="denver" />Denver Broncos
           </a>
         </div>
         <div id="nfl">
           <a href="https://www.nfl.com/" target="_blank">
-            <img src="/src/assets/nfl.png" />NFL
+            <img :src="nfl" />NFL
           </a>
         </div>
       </div>
     </div>
   </footer>
 </template>
+
+<script setup>
+import banner from "../assets/banner.gif";
+import settings from "../assets/settings.png";
+import denver from "../assets/den.png";
+import nfl from "../assets/nfl.png";
+</script>
+
 
 <style>
 .team-buttons {
@@ -55,7 +63,8 @@
   height: 50px;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -80,9 +89,8 @@ footer {
   color: white;
   text-align: center;
   line-height: 2.5rem;
-  position: fixed; 
+  position: fixed;
   bottom: 0;
   left: 0;
 }
-
 </style>

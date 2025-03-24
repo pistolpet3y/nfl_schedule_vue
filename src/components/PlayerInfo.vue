@@ -15,10 +15,14 @@ export default {
       player: null
     };
   },
-  async created() {
-    const response = await fetch("https://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/4426338?lang=en&region=us");
-    this.player = await response.json();
+  mounted() {
+    fetch("https://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/2024/athletes/4426338?lang=en&region=us")
+      .then(response => response.json())
+      .then(data => {
+        this.player = data;
+      });
   },
+
   methods: {
     formatDate(date) {
       return date ? new Date(date).toLocaleDateString('sv-SE') : "Unknown";

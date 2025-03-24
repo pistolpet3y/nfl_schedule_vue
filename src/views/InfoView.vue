@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import PlayerInfo from "/src/components/PlayerInfo.vue";
+import PlayerInfo from "../src/components/PlayerInfo.vue";
 
 export default {
   components: { PlayerInfo },

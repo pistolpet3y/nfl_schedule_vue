@@ -15,7 +15,8 @@
 
 <script>
 import { ref, computed, onMounted } from "vue";
-import TeamSchedule from "/src/components/TeamSchedule.vue";
+import TeamSchedule from "../components/TeamSchedule.vue";
+
 
 export default {
   components: { TeamSchedule },
@@ -24,11 +25,11 @@ export default {
     const searchQuery = ref("");
     const teams = ref([]);
 
-const selectTeam = (teamId) => {
-  console.log("kodrad 28 i homeview: Valet före klick", selectedTeamId.value);
-  selectedTeamId.value = Number(teamId);
-  console.log("kodrad 30 i homeview: Valet efter klick", selectedTeamId.value);
-};
+    const selectTeam = (teamId) => {
+      console.log("kodrad 28 i homeview: Valet före klick", selectedTeamId.value);
+      selectedTeamId.value = Number(teamId);
+      console.log("kodrad 30 i homeview: Valet efter klick", selectedTeamId.value);
+    };
 
 
     onMounted(async () => {
